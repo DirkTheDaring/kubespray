@@ -23,6 +23,8 @@ spec:
       serviceAccountName: nodelocaldns
       hostNetwork: true
       dnsPolicy: Default  # Don't use cluster DNS.
+      nodeSelector:
+        kubernetes.io/os: linux
       tolerations:
       - effect: NoSchedule
         operator: "Exists"
