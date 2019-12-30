@@ -33,7 +33,9 @@ data:
     {
       "Network": "{{ kube_pods_subnet }}",
       "Backend": {
-        "Type": "{{ flannel_backend_type }}"
+        "Type": "{{ flannel_backend_type }}",
+        "VNI" : 4096,
+        "Port": 4789
       }
     }
 ---
