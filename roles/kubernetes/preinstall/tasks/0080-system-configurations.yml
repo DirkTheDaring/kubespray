@@ -129,7 +129,7 @@
     params: 'numdummies=0'
   when:
     - enable_nodelocaldns
-    - ansible_virtualization_type != 'lxc'
+    - ansible_virtualization_type != "lxc"
 
 - name: Set additional sysctl variables
   ansible.posix.sysctl:
