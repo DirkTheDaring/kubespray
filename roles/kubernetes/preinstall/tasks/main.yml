@@ -5,6 +5,7 @@
   when:
     - not dns_late
     - kubelet_fail_swap_on
+    - ansible_virtualization_type != 'lxc'
 
 - name: Set facts
   import_tasks: 0020-set_facts.yml
